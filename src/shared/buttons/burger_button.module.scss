@@ -1,0 +1,40 @@
+.burger_button,
+.burger_button__open {
+	width: 30;
+	height: 30;
+	padding: 5px;
+	position: relative;
+	& span,
+	&::before {
+		content: '';
+		width: 20px;
+		height: 2px;
+		background-color: var(--foreground);
+		transition: 0.5s;
+	}
+	span {
+		left: 5px;
+		position: absolute;
+		top: 10px;
+	}
+	&::before {
+		bottom: 10px;
+		left: 5px;
+		position: absolute;
+	}
+}
+.burger_button__open {
+	& span,
+	&:before {
+		transition: 0.5s;
+	}
+	& span {
+		top: 15px;
+		rotate: 45deg;
+	}
+
+	&:before {
+		top: 15px;
+		rotate: -45deg;
+	}
+}
